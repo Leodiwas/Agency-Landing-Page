@@ -398,7 +398,7 @@ header {
 .card-top > .sub-title,
 .card-para {
   color: var(--color-primary-black);
-  margin-bottom: 4rem !important;
+  margin-bottom: 4rem;
 }
 .card-bottom {
   width: 100%;
@@ -455,7 +455,7 @@ header {
   margin-top: 1.6rem;
 }
 .footer-cards {
-  padding-block: 4rem 8rem;
+  padding-block: 8rem;
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -696,6 +696,23 @@ header {
     width: 100%;
     margin-bottom: 0 !important;
   }
+  .cards-title {
+    margin-bottom: 2rem;
+  }
+  .cards-title .title {
+    font-size: 4.2rem !important;
+  }
+  .card-top > .sub-title {
+    font-size: 3.4rem;
+    margin-bottom: 2rem !important;
+  }
+  .card-top > .card-para {
+    margin-bottom: 0 !important;
+    font-size: 2rem;
+  }
+  .card-top {
+    padding: 2rem;
+  }
 
   /* footer */
   .footer {
@@ -716,6 +733,12 @@ header {
   }
   .footer-about .para {
     max-width: unset !important;
+  }
+  .footer-country {
+    justify-content: space-between;
+  }
+  .footer-cards {
+    padding-block: 4rem;
   }
   .footer-copyright {
     flex-direction: column;
