@@ -41,7 +41,7 @@ html {
 body {
   font-family: var(--font-primary);
   overflow-x: hidden;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .img-responsive {
   max-width: 100%;
@@ -153,7 +153,7 @@ header {
 }
 /* ===navbar=== */
 .navbar {
-  padding-block: 4rem !important;
+  padding-block: 4.2rem !important;
   justify-content: space-between !important;
 }
 .navbar-collapse {
@@ -193,6 +193,7 @@ header {
 }
 
 /* ===hero=== */
+
 .hero-contents {
   padding: 0 10rem;
 }
@@ -289,7 +290,7 @@ body
 .details-img-box {
   position: absolute;
   bottom: 28rem;
-  right: 38rem;
+  right: 48rem;
 }
 
 /* ===================scratch styling================ */
@@ -625,7 +626,7 @@ body
     text-align: center;
   }
   .contact-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
     line-height: 3.6rem;
     margin-bottom: 2.6rem;
   }
@@ -669,7 +670,7 @@ body
   }
   .footer-countries {
     justify-content: center;
-    gap: 1.4rem;
+    gap: 2rem;
   }
   .footer-copyright {
     flex-direction: column;
