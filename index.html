@@ -15,6 +15,9 @@
   <!-- CSS Link -->
   <link rel="stylesheet" href="style.css" type="text/css" />
 
+  <!-- JS Link -->
+  <script defer src="./script.js" ></script>
+
   <!-- AOS Link -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
@@ -34,23 +37,81 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active nav-text" aria-current="page" href="">About</a>
+              <a class="nav-link active nav-text" aria-current="page" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="">Products</a>
+              <a class="nav-link nav-text" href="#suggest">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="">Contacts</a>
+              <a class="nav-link nav-text" href="#contact">Contacts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="">Help</a>
+              <a class="nav-link nav-text" href="#help">Help</a>
             </li>
           </ul>
         </div>
         <div class="navbar-sign">
-          <a href="" class="nav-text">Sign In</a>
-          <div class="btn-container">
-            <a href="" class="btn-primary btn-text">Sign Up</a>
+          <button type="button" class="nav-text btn-tertiary" data-bs-toggle="modal" data-bs-target="#sign_in_modal" data-bs-whatever="@mdo" >Sign In</button>
+          <div class="btn-container" >
+            <button type="button" data-bs-toggle="modal" data-bs-target="#sign_up_modal" data-bs-whatever="@mdo"class="btn-primary btn-text">Sign Up</button>
+          </div>
+        </div>
+        <div class="modal fade" id="sign_in_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="email" class="col-form-label">Email:</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="col-form-label">Password:</label>
+                    <input type="password" class="form-control" id="password"></input>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Sign In</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="sign_up_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="first-name" class="col-form-label">First Name:</label>
+                    <input type="text" class="form-control" id="first-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="last-name" class="col-form-label">Last Name:</label>
+                    <input type="text" class="form-control" id="last-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email2" class="col-form-label">Email:</label>
+                    <input type="email" class="form-control" id="email2">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password2" class="col-form-label">Password:</label>
+                    <input type="password" class="form-control" id="password2"></input>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Sign Up</button>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -71,7 +132,7 @@
                 audiam animal molestiae te. Ex duo eripuit mentitum.
               </p>
               <div class="btn-container">
-                <a href="" class="btn-secondary btn-text">Contact Us</a>
+                <button type="button" id="contact_btn" class="btn-secondary btn-text">Contact Us</button>
               </div>
             </div>
           </div>
@@ -82,7 +143,7 @@
   <!-- main -->
   <main>
     <!-- info -->
-    <section class="info">
+    <section class="info" id="about">
       <div class="container">
         <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 align-items-end">
           <div class="col">
@@ -125,20 +186,20 @@
       </div>
     </section>
     <!-- Suggest -->
-    <section class="suggest">
+    <section class="suggest" id="suggest">
       <div class="container">
         <div class="row row-cols-1 row-cols-md-1">
           <div class="col">
             <div class="suggest-contents" data-aos="fade-up">
               <div class="suggest-left">
-                <div class="sub-title">
+                <p class="sub-title">
                   Simplify your online shipping for free this month!
-                </div>
+                </p>
               </div>
               <div class="suggest-right">
-                <div class="sub-title">
+                <p class="sub-title">
                   Grow your business with better Shipping organizations
-                </div>
+                </p>
               </div>
             </div>
           </div>
@@ -149,7 +210,7 @@
       </div>
     </section>
     <!-- details -->
-    <section class="details">
+    <section class="details" >
       <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
           <div class="col">
@@ -161,13 +222,13 @@
               </p>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-6 details-cycle-img" >
             <div class="details-img-box" data-aos="fade-up">
               <img src="./images/cycle-man.png" alt="" class="img-responsive" />
             </div>
           </div>
           <div class="col">
-            <div class="details-card" data-aos="fade-up">
+            <div class="details-card details-card-3" data-aos="fade-up">
               <img src="./images/details-buy.svg" alt="" class="img-responsive" />
               <p class="para">
                 Et has minim elitr intellegat. Mea aeterno eleifend antiopam
@@ -246,7 +307,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -320,7 +381,7 @@
     </section>
   </main>
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" id="help">
     <div class="container">
       <div class="row ">
         <div class="col-12 col-md-6 col-lg-6 ">
